@@ -1,0 +1,318 @@
+$info: #00bfe7;
+$dark: #100028;
+
+.hero-section {
+    min-height: 100vh;
+    padding-top: 64px;
+    background-image: url(../../assets/background-image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .row {
+        .col {
+            .container {
+                h1 {
+
+                    font-family: 'Tilt Neon', cursive;
+                    font-weight: bold;
+                    font-size: 55px;
+
+                }
+
+                .type-writer,
+                .type-writer-cursor {
+                    color: $info;
+                    font-size: xx-large;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}
+
+//about section stylling
+#about-section {
+
+    .row:nth-child(1) {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        .col-lg-5 {
+            .my-image:hover{
+                filter:drop-shadow(-10px 10px 20px $info) contrast(110%) ;
+            }
+        }
+
+        .dots {
+            position: absolute;
+            z-index: -1;
+            border-radius: 15px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(160deg, #48cae4, #caf0f8);
+        }
+
+        .dots:nth-child(1) {
+            animation: rotate 2s infinite;
+            top: 10%;
+            left: 30%;
+        }
+
+        .dots:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 70%;
+            left: 85%;
+            animation: rotate 3s infinite;
+        }
+    }
+}
+
+//skill section
+#skills-section {
+    .row {
+        .col {
+            .card {
+                background: linear-gradient(160deg, #48cae4, #caf0f8);
+            }
+
+            .card:hover {
+                background: linear-gradient(160deg, #caf0f8, #48cae4);
+
+            }
+        }
+    }
+}
+
+
+// services-section
+#services-section {
+    .row {
+        .col {
+            .card {
+                position: relative;
+                min-height: 283px;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+
+                .services-icon {
+                    position: absolute;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: -30px;
+                    left: 30px;
+                }
+            }
+
+            .card:hover .services-icon {
+                transition: 0.3s;
+                transform: translateX(25px);
+                background-color: $dark !important;
+                border: 2px solid $info;
+                color: $info;
+            }
+
+            .card:hover {
+                border: 1px solid $info !important;
+
+            }
+        }
+    }
+
+}
+
+// project-section
+#project-section {
+    margin: 190px 0;
+    background-image: url(../../assets/laptop-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+
+    .uppar-layer {
+        height: 500px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+//portfolio-section
+#portfolio-section {
+    .row {
+        .col {
+            .card {
+                box-shadow: $info 0px 30px 100px -12px inset, $info 0px 18px 60px -18px inset;
+
+                .card-img {
+                    overflow: hidden;
+                    height: 250px;
+                    display: flex;
+
+
+                }
+
+                .card-img:hover .inner-img {
+                    transition: 1s;
+                    transform: scale(1.2);
+                }
+
+                .card-body {
+                    .card-title {
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+//contact-section
+#contact-stylling {
+    background-image: url("https://images.unsplash.com/photo-1592778024290-548bcd706e33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tcHV0ZXIlMjB0b3dlcnxlbnwwfHwwfHw%3D&w=1000&q=80");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+
+    .container {
+        .row {
+            display: flex;
+            align-items: center;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+            min-height: 570px;
+
+        }
+    }
+}
+
+
+
+
+// button-styling
+.button-styling {
+    background-color: #3a0ca3 !important;
+    box-shadow: inset 15px 15px 40px $info, inset -120px -10px 40px $info;
+}
+
+.button-styling:hover {
+    transition: 0.8s;
+    box-shadow: inset -10px 10px 50px $info, inset 120px -10px 50px $info;
+    // box-shadow: inset -115px -10px 40px $info,inset 10px 10px 50px $info;
+
+}
+
+@media only screen and (max-width: 992px) {
+    .hero-section {
+        min-height: 80vh;
+        background-image: url(../../assets/background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .row {
+        .col {
+            .container {
+                h1 {
+                    font-size: 40px !important;
+                }
+            }
+        }
+    }
+
+    //About section
+    #about-section {
+        .row:nth-child(1) {
+            .dots:nth-child(1) {
+                background: linear-gradient(160deg, #023e8a, #2a9d8f);
+
+                animation: rotate 2s infinite;
+                height: 55px;
+                width: 55px;
+                top: 2%;
+                left: 20%;
+            }
+
+            .dots:nth-child(2) {
+                background: linear-gradient(160deg, #023e8a, #2a9d8f);
+                height: 100px;
+                width: 100px;
+                top: 80%;
+                left: 71%;
+                animation: rotate 3s infinite;
+            }
+        }
+    }
+
+    //skill section
+    #skills-section {
+        .row {
+            .col {
+                .card {
+                    background: linear-gradient(180deg, #2a9d8f, #023e8a);
+                }
+            }
+        }
+    }
+
+    #project-section {
+        background-image: url(../../assets/laptop-background2.jpg);
+
+        .uppar-layer {
+            height: 500px;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    //contact-section
+    #contact-section {
+        .container {
+            .row {
+                border-radius: 0% !important;
+
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 265px) {
+    .row {
+        .col {
+            .container {
+                padding: 0% !important;
+
+                h1 {
+                    font-size: 30px !important;
+                }
+            }
+        }
+    }
+
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

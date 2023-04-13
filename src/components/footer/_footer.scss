@@ -1,0 +1,23 @@
+$info: #00bfe7;
+
+.footer-logo {
+    font-family: 'WindSong', cursive;
+    font-size: x-large;
+}
+
+.nav-links {
+    .btn-link {
+        .arrows {
+            display: none;
+        }
+        
+    }
+}
+.btn-link:hover .arrows {
+    transition: 0.4s;
+    display: inline !important;
+    color: $info; 
+}
+.btn-link:hover{
+    color: $info !important;
+}
